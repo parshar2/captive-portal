@@ -42,7 +42,11 @@ if (is_authenticated()) {
 //    $url = $login_url . '?mac=' . urlencode($mac);
 //    header('Location: ' . $url);
 
-    send_login_page();
+//    send_login_page();
+
+    // Disabling login for the time being
+    enable_address();
+    send_landing_page();
 }
 
 function is_authenticated() {

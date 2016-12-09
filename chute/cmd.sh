@@ -43,7 +43,7 @@ iptables -t mangle -A PREROUTING -d 173.229.3.10 -j ACCEPT
 
 # Create internet chain
 # This is used to authenticate users who have already signed up
-iptables -N internet -t mangle
+x
 
 # First send all traffic via newly created internet chain
 # At the prerouting NAT stage this will DNAT them to the local
