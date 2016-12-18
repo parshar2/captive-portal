@@ -20,7 +20,9 @@ ADD chute/000-default.conf /etc/apache2/sites-available/000-default.conf
 ADD chute/cmd.sh /usr/local/bin/cmd.sh
 ADD chute/rmtrack /usr/bin/rmtrack
 ADD chute/index.php /var/www/index.php
+ADD chute/poller.php /var/www/poller.php
 ADD chute/dnsmasq.conf /etc/dnsmasq.conf
+
 
 RUN echo "www-data ALL = NOPASSWD: /sbin/iptables *" >> /etc/sudoers.d/www-data
 RUN echo "www-data ALL = NOPASSWD: /usr/bin/rmtrack [0-9]*.[0-9]*.[0-9]*.[0-9]*" >> /etc/sudoers.d/www-data
