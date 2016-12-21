@@ -36,13 +36,12 @@ function decode_ads($ad_string){
      $duration = $ad->duration;
      $status = $ad->status;
      $impressions = $ad->impressions;
-     $purchased_amount = $ad->purchased_amount;
-     $time_remaining = $ad->time_remaining;
+     $purchased_amount = 0;
+     $time_remaining = 0;
      $image = $ad->image;
      fetch_image($image_url, $uuid);
      $thumbnail = $ad->thumbnail;
-     fwrite($ad_file, $uuid.",".$name.",".$description.",".$date_submitted.",".$date_approved.",".$duration.",".$status.",".$impressions.",".$purchased_amount.",".$time_remaining.",".$im
-age.",".$thumbnail."\n");
+     fwrite($ad_file, $uuid.",".$name.",".$description.",".$date_submitted.",".$date_approved.",".$duration.",".$status.",".$impressions.",".$purchased_amount.",".$time_remaining.",".$image.",".$thumbnail."\n");
   }
   fclose($ad_file);
 }
