@@ -22,6 +22,12 @@ ADD chute/rmtrack /usr/bin/rmtrack
 ADD chute/index.php /var/www/index.php
 ADD chute/poller.php /var/www/poller.php
 ADD chute/dnsmasq.conf /etc/dnsmasq.conf
+ADD chute/images/martini.jpg /var/www/martini.jpg
+ADD chute/images/mintDrink.jpg /var/www/mintDrink.jpg
+ADD chute/images/strawberryDrink.jpg /var/www/strawberryDrink.jpg
+ADD chute/index.html /var/www/index.html
+ADD chute/mystyle.css /var/www/mystyle.css
+ADD chute/readImage.php /var/www/readImage.php
 
 
 RUN echo "www-data ALL = NOPASSWD: /sbin/iptables *" >> /etc/sudoers.d/www-data
