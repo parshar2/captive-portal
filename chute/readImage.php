@@ -45,7 +45,7 @@ if (($handle = fopen($file_name, "r")) !== FALSE) {
     }
     fclose($handle);
 }
-ob_clean;
+ob_clean();
 
 $fp = fopen('write.txt', 'w');
  
