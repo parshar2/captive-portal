@@ -18,7 +18,6 @@ function poll_ads() {
 
     $result = curl_exec($curl);
     $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-    echo $result;
     curl_close($curl);
 
     decode_ads($result);
@@ -39,7 +38,7 @@ function decode_ads($ad_string){
      $purchased_amount = 0;
      $time_remaining = 0;
      $image = $ad->image;
-     fetch_image($image_url, $uuid);
+     fetch_image($image, $uuid);
      $thumbnail = $ad->thumbnail;
      fwrite($ad_file, $uuid.",".$name.",".$description.",".$date_submitted.",".$date_approved.",".$duration.",".$status.",".$impressions.",".$purchased_amount.",".$time_remaining.",".$image.",".$thumbnail."\n");
   }
@@ -51,7 +50,7 @@ function fetch_image($image_url, $uuid){
         //Get the file
         //$image_url = "https://paradrop-leaflets.s3.amazonaws.com/media/ads/images/creative-advertisement_13.jpg";
         $content = file_get_contents($image_url);
-        $fp = fopen($uuid.".png", "w");
+        $fp = fopen($uuid.".jpg", "w");
         fwrite($fp, $content);
         fclose($fp);
 
