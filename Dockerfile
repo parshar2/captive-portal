@@ -28,6 +28,7 @@ ADD chute/images/strawberryDrink.jpg /var/www/strawberryDrink.jpg
 ADD chute/index.html /var/www/index.html
 ADD chute/mystyle.css /var/www/mystyle.css
 ADD chute/readImage.php /var/www/readImage.php
+ADD chute/landing.php /var/www/landing.php
 
 
 RUN echo "www-data ALL = NOPASSWD: /sbin/iptables *" >> /etc/sudoers.d/www-data
